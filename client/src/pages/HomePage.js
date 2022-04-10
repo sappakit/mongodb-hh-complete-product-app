@@ -47,8 +47,8 @@ function HomePage() {
       <div className="search-box-container">
         <div className="search-box">
           <label>
-            Search post
-            <input type="text" placeholder="Search by title" />
+            Search product
+            <input type="text" placeholder="Search by name" />
           </label>
         </div>
         <div className="category-filter">
@@ -127,6 +127,7 @@ function HomePage() {
         <button className="previous-button">Previous</button>
         <button className="next-button">Next</button>
       </div>
+      <div className="pages">1/ total page</div>
     </div>
   );
 }
