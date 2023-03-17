@@ -1,13 +1,17 @@
 import express from "express";
-import bodyParser from "body-parser";
 import cors from "cors";
 import productRouter from "./apps/products.js";
 
 const app = express();
 const port = 4001;
 
+// `cors` เป็น Middleware ที่ทำให้ Client ใดๆ ตามที่กำหนด
+// สามารถสร้าง Request มาหา Server เราได้
+// ในโค้ดบรรทัดล่างนี้คือให้ Client ไหนก็ได้สามารถสร้าง Request มาหา Server ได้
 app.use(cors());
-app.use(bodyParser.json());
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use("/products", productRouter);
 
