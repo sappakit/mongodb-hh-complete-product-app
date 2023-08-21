@@ -73,7 +73,7 @@ function HomePage() {
         )}
         {products.map((product) => {
           return (
-            <div className="product" key={product.id}>
+            <div className="product" key={product._id}>
               <div className="product-preview">
                 <img
                   src={product.image}
@@ -92,7 +92,7 @@ function HomePage() {
                   <button
                     className="view-button"
                     onClick={() => {
-                      navigate(`/product/view/${product.id}`);
+                      navigate(`/product/view/${product._id}`);
                     }}
                   >
                     View
@@ -100,7 +100,7 @@ function HomePage() {
                   <button
                     className="edit-button"
                     onClick={() => {
-                      navigate(`/product/edit/${product.id}`);
+                      navigate(`/product/edit/${product._id}`);
                     }}
                   >
                     Edit
@@ -111,7 +111,7 @@ function HomePage() {
               <button
                 className="delete-button"
                 onClick={() => {
-                  deleteProduct(product.id);
+                  deleteProduct(product._id);
                 }}
               >
                 x
